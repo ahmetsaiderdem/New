@@ -1,9 +1,9 @@
 import sys
 from PyQt5 import QtWidgets
-from Mainarayüz1 import QApplication,Ui_MainWindow,QtCore
+from Mainarayüz1 import Ui_MainWindow
 import Mainarayüz1,Mainarayüz2
 
-class myApp(MainWindow):
+class myApp(Ui_MainWindow):
     def __init__(self):
         super(myApp,self).__init__()
         self.ui = Ui_MainWindow()
@@ -20,7 +20,9 @@ class myApp(MainWindow):
 
 
 
-app = QApplication()
+app = Mainarayüz1()
 window = myApp()
 window.show()
 app.exec_()
+
+app()
